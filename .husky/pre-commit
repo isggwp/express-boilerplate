@@ -1,0 +1,28 @@
+npm run check-format || 
+{
+    echo "Please run 'npm run check-format' before committing";
+    false;
+}
+
+npm run check-lint || 
+{
+    echo "Please run 'npm run check-lint' before committing";
+    false;
+}
+
+
+npm run check-types || 
+{
+    echo "Please run 'npm run check-types' before committing";
+    false;
+}
+
+
+npm run build || 
+{
+    echo "Please run 'npm run build' before committing";
+    false;
+}
+
+
+echo "All checks passed. Looks good to Committing..."
