@@ -11,9 +11,10 @@
     "build": "npx tsc && cp .env ./build/.env",
     "prod": "node build index.js",
     "prepare": "npx husky install",
+    "format": "npx prettier ./src --write",
     "check-types": "npx tsc --noEmit --pretty",
     "check-lint": "npx eslint ./src",
-    "check-format": "npx prettier . --check"
+    "check-format": "npx prettier ./src"
   },
   "husky": {
     "hooks": {
@@ -24,9 +25,10 @@
   "devDependencies": {
     "@eslint/js": "^9.6.0",
     "@types/dotenv": "^8.2.0",
+    "@types/eslint__js": "^8.42.3",
     "@types/express": "^4.17.21",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^9.6.0",
+    "eslint": "^8.57.0",
     "globals": "^15.8.0",
     "husky": "^9.0.11",
     "nodemon": "^3.1.4",
@@ -37,8 +39,13 @@
     "typescript-eslint": "^7.15.0"
   },
   "dependencies": {
+    "@types/cors": "^2.8.17",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "winston": "^3.13.0",
+    "winston-daily-rotate-file": "^5.0.0",
+    "zod": "^3.23.8"
   },
   "config": {
     "commitizen": {
